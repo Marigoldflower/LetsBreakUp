@@ -10,17 +10,18 @@ import SwiftUI
 struct LetsBreakUpTabView: View {
     var body: some View {
         TabView {
-            Text("첫 번째 탭")
+            HomeView()
                 .tabItem {
                     Image(systemName: "house")
                 }
                 
             
-            Text("두 번째 탭")
+            SettingView()
                 .tabItem {
                     Image(systemName: "gearshape")
                 }
         }
+        .tint(Color.black) // TabBar 아이템의 색상 변경
         
     }
 }
