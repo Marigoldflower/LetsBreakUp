@@ -25,6 +25,19 @@ struct LetsBreakUpTabView: View {
             }
             
         }
+        .onAppear {
+            let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = UIColor.breakUpGray // TabBar의 배경색을 회색으로 설정
+            
+            // TabBar의 상단 테두리 색상과 두께 설정
+            appearance.shadowColor = UIColor.black // 테두리 색상을 검정으로 설정
+            appearance.shadowImage = UIImage() // 테두리 이미지를 빈 이미지로 설정하여 두께를 1px로 만듦
+            
+            // iOS 15 이상에서 TabBar 스타일 적용
+            UITabBar.appearance().standardAppearance = appearance
+            UITabBar.appearance().scrollEdgeAppearance = appearance
+        }
         .tint(Color.black) // TabBar 아이템의 색상 변경
         
     }

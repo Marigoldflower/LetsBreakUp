@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+extension UIColor {
+    static let breakUpGray = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.00)
+}
+
 extension Color {
     static let breakUpMint = Color(UIColor(red: 0.41, green: 0.78, blue: 0.76, alpha: 1.00))
     static let breakUpBackground = Color(UIColor(red: 0.96, green: 0.95, blue: 0.93, alpha: 1.00))

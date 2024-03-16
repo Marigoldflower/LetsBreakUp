@@ -18,6 +18,7 @@
 		84AE6E102BA1C45D00749219 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE6E0F2BA1C45D00749219 /* Color.swift */; };
 		84AE6E122BA1C59B00749219 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE6E112BA1C59B00749219 /* HomeView.swift */; };
 		84AE6E142BA1C6A400749219 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE6E132BA1C6A400749219 /* SettingView.swift */; };
+		84AE6EAA2BA3CF9100749219 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE6EA92BA3CF9100749219 /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		84AE6E0F2BA1C45D00749219 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		84AE6E112BA1C59B00749219 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		84AE6E132BA1C6A400749219 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		84AE6EA92BA3CF9100749219 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +143,8 @@
 			children = (
 				84AE6DAD2B988C5B00749219 /* ContentView.swift */,
 				84AE6DD52B988FF500749219 /* LetsBreakUpTabView.swift */,
-				84AE6E112BA1C59B00749219 /* HomeView.swift */,
-				84AE6E132BA1C6A400749219 /* SettingView.swift */,
+				84AE6EA72BA3363800749219 /* HomeView */,
+				84AE6EA82BA3364100749219 /* SettingView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -153,6 +155,23 @@
 				84AE6E0F2BA1C45D00749219 /* Color.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		84AE6EA72BA3363800749219 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				84AE6E112BA1C59B00749219 /* HomeView.swift */,
+				84AE6EA92BA3CF9100749219 /* CalendarView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		84AE6EA82BA3364100749219 /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				84AE6E132BA1C6A400749219 /* SettingView.swift */,
+			);
+			path = SettingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84AE6DD62B988FF500749219 /* LetsBreakUpTabView.swift in Sources */,
+				84AE6EAA2BA3CF9100749219 /* CalendarView.swift in Sources */,
 				84AE6E102BA1C45D00749219 /* Color.swift in Sources */,
 				84AE6DAE2B988C5B00749219 /* ContentView.swift in Sources */,
 				84AE6E142BA1C6A400749219 /* SettingView.swift in Sources */,

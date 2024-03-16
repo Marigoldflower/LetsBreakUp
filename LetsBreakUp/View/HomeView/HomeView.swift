@@ -19,11 +19,8 @@ struct HomeView: View {
         .toolbar {
             // ToolbarItem으로 영역의 위치를 나눠줄 수 있다.
             ToolbarItem(placement: .topBarLeading) {
-                VStack(alignment: .leading) {
-                    Text("안녕하세요")
-                    Text("홍필님 😊")
-                        .font(.title2)
-                }
+                Text("디톡스 실행")
+                    .font(.title2)
             }
             
             ToolbarItem(placement: .topBarTrailing) {
