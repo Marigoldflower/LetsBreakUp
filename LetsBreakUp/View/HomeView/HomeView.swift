@@ -14,13 +14,13 @@ struct HomeView: View {
             Color.breakUpBackground
                 .ignoresSafeArea(.all)
             
-            Text("첫 번째 탭")
+            CalendarView()
         }
         .toolbar {
             // ToolbarItem으로 영역의 위치를 나눠줄 수 있다.
             ToolbarItem(placement: .topBarLeading) {
                 Text("디톡스 실행")
-                    .font(.title2)
+                    .font(.breakUpFont(size: 20))
             }
             
             ToolbarItem(placement: .topBarTrailing) {

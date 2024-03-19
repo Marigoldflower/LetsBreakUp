@@ -13,7 +13,7 @@ extension UIColor {
 
 extension Color {
     static let breakUpMint = Color(UIColor(red: 0.41, green: 0.78, blue: 0.76, alpha: 1.00))
-    static let breakUpBackground = Color(UIColor(red: 0.96, green: 0.95, blue: 0.93, alpha: 1.00))
+    static let breakUpBackground = Color(UIColor(red: 0.99, green: 0.96, blue: 0.91, alpha: 1.00))
     static let breakUpBlack = Color(UIColor(red: 0.03, green: 0.03, blue: 0.02, alpha: 1.00))
     static let breakUpYellow = Color(UIColor(red: 0.98, green: 0.79, blue: 0.47, alpha: 1.00))
     static let breakUpOrange = Color(UIColor(red: 0.96, green: 0.50, blue: 0.36, alpha: 1.00))

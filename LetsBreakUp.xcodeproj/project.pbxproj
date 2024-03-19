@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84995FF42BA975E700DCD4D4 /* 양진체v0.9_ttf.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84995FF32BA975E700DCD4D4 /* 양진체v0.9_ttf.ttf */; };
+		84995FF72BA976DF00DCD4D4 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84995FF62BA976DF00DCD4D4 /* Fonts.swift */; };
+		84995FF92BA97A9E00DCD4D4 /* CalendarHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84995FF82BA97A9E00DCD4D4 /* CalendarHeader.swift */; };
+		84995FFB2BA97ACA00DCD4D4 /* CalendarWeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84995FFA2BA97ACA00DCD4D4 /* CalendarWeekDay.swift */; };
+		84995FFD2BA97C3100DCD4D4 /* CalendarDayGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84995FFC2BA97C3100DCD4D4 /* CalendarDayGrid.swift */; };
+		849960002BA97CE200DCD4D4 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84995FFF2BA97CE200DCD4D4 /* CalendarDate.swift */; };
+		849960022BA97FDD00DCD4D4 /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849960012BA97FDD00DCD4D4 /* Dates.swift */; };
 		84AE6DAC2B988C5B00749219 /* LetsBreakUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE6DAB2B988C5B00749219 /* LetsBreakUpApp.swift */; };
 		84AE6DAE2B988C5B00749219 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE6DAD2B988C5B00749219 /* ContentView.swift */; };
 		84AE6DB02B988C5C00749219 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84AE6DAF2B988C5C00749219 /* Assets.xcassets */; };
@@ -39,6 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84995FF32BA975E700DCD4D4 /* 양진체v0.9_ttf.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "양진체v0.9_ttf.ttf"; sourceTree = "<group>"; };
+		84995FF52BA9769D00DCD4D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		84995FF62BA976DF00DCD4D4 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		84995FF82BA97A9E00DCD4D4 /* CalendarHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeader.swift; sourceTree = "<group>"; };
+		84995FFA2BA97ACA00DCD4D4 /* CalendarWeekDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWeekDay.swift; sourceTree = "<group>"; };
+		84995FFC2BA97C3100DCD4D4 /* CalendarDayGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDayGrid.swift; sourceTree = "<group>"; };
+		84995FFF2BA97CE200DCD4D4 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
+		849960012BA97FDD00DCD4D4 /* Dates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dates.swift; sourceTree = "<group>"; };
 		84AE6DA82B988C5B00749219 /* LetsBreakUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsBreakUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AE6DAB2B988C5B00749219 /* LetsBreakUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsBreakUpApp.swift; sourceTree = "<group>"; };
 		84AE6DAD2B988C5B00749219 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +96,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84995FF22BA975C100DCD4D4 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				84995FF32BA975E700DCD4D4 /* 양진체v0.9_ttf.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		84995FFE2BA97CCF00DCD4D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84995FFF2BA97CE200DCD4D4 /* CalendarDate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		84AE6D9F2B988C5B00749219 = {
 			isa = PBXGroup;
 			children = (
@@ -104,8 +135,11 @@
 		84AE6DAA2B988C5B00749219 /* LetsBreakUp */ = {
 			isa = PBXGroup;
 			children = (
+				84995FF52BA9769D00DCD4D4 /* Info.plist */,
 				84AE6DAB2B988C5B00749219 /* LetsBreakUpApp.swift */,
+				84995FF22BA975C100DCD4D4 /* Font */,
 				84AE6DD82BA096F600749219 /* Helpers */,
+				84995FFE2BA97CCF00DCD4D4 /* Model */,
 				84AE6DD72BA096E100749219 /* View */,
 				84AE6DAF2B988C5C00749219 /* Assets.xcassets */,
 				84AE6DB12B988C5C00749219 /* Preview Content */,
@@ -153,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				84AE6E0F2BA1C45D00749219 /* Color.swift */,
+				84995FF62BA976DF00DCD4D4 /* Fonts.swift */,
+				849960012BA97FDD00DCD4D4 /* Dates.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -162,6 +198,9 @@
 			children = (
 				84AE6E112BA1C59B00749219 /* HomeView.swift */,
 				84AE6EA92BA3CF9100749219 /* CalendarView.swift */,
+				84995FF82BA97A9E00DCD4D4 /* CalendarHeader.swift */,
+				84995FFA2BA97ACA00DCD4D4 /* CalendarWeekDay.swift */,
+				84995FFC2BA97C3100DCD4D4 /* CalendarDayGrid.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -279,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84AE6DB32B988C5C00749219 /* Preview Assets.xcassets in Resources */,
+				84995FF42BA975E700DCD4D4 /* 양진체v0.9_ttf.ttf in Resources */,
 				84AE6DB02B988C5C00749219 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,12 +344,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84995FFD2BA97C3100DCD4D4 /* CalendarDayGrid.swift in Sources */,
+				849960002BA97CE200DCD4D4 /* CalendarDate.swift in Sources */,
+				84995FF72BA976DF00DCD4D4 /* Fonts.swift in Sources */,
 				84AE6DD62B988FF500749219 /* LetsBreakUpTabView.swift in Sources */,
+				84995FF92BA97A9E00DCD4D4 /* CalendarHeader.swift in Sources */,
 				84AE6EAA2BA3CF9100749219 /* CalendarView.swift in Sources */,
 				84AE6E102BA1C45D00749219 /* Color.swift in Sources */,
 				84AE6DAE2B988C5B00749219 /* ContentView.swift in Sources */,
+				849960022BA97FDD00DCD4D4 /* Dates.swift in Sources */,
 				84AE6E142BA1C6A400749219 /* SettingView.swift in Sources */,
 				84AE6E122BA1C59B00749219 /* HomeView.swift in Sources */,
+				84995FFB2BA97ACA00DCD4D4 /* CalendarWeekDay.swift in Sources */,
 				84AE6DAC2B988C5B00749219 /* LetsBreakUpApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,6 +523,7 @@
 				DEVELOPMENT_TEAM = T9LJ52AQY5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LetsBreakUp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -506,6 +553,7 @@
 				DEVELOPMENT_TEAM = T9LJ52AQY5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LetsBreakUp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

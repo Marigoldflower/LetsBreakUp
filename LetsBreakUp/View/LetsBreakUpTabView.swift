@@ -26,6 +26,12 @@ struct LetsBreakUpTabView: View {
             
         }
         .onAppear {
+            for fontFamily in UIFont.familyNames {
+                for fontName in UIFont.fontNames(forFamilyName: fontFamily) {
+                    print(fontName)
+                }
+            }
+            
             let appearance = UITabBarAppearance()
             appearance.configureWithOpaqueBackground()
             appearance.backgroundColor = UIColor.breakUpGray // TabBar의 배경색을 회색으로 설정
