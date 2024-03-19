@@ -13,9 +13,21 @@ struct CalendarWeekDay: View {
     var body: some View {
         HStack {
             ForEach(weekDays, id: \.self) { day in
-                Text(day)
-                    .font(.breakUpFont(size: 18))
-                    .frame(maxWidth: .infinity)
+                if day == "토" {
+                    Text(day)
+                        .foregroundStyle(Color.breakUpMint)
+                        .font(.breakUpFont(size: 18))
+                        .frame(maxWidth: .infinity)
+                } else if day == "일" {
+                    Text(day)
+                        .foregroundStyle(Color.breakUpRed)
+                        .font(.breakUpFont(size: 18))
+                        .frame(maxWidth: .infinity)
+                } else {
+                    Text(day)
+                        .font(.breakUpFont(size: 18))
+                        .frame(maxWidth: .infinity)
+                }
             }
         }
     }

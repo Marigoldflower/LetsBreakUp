@@ -12,6 +12,7 @@ struct CalendarView: View {
         VStack {
             CalendarHeader()
             CalendarWeekDay()
+            CalendarDayGrid()
         }
     }
 }
