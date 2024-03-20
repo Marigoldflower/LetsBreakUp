@@ -7,12 +7,14 @@
 
 import SwiftUI
 
-struct CalendarView: View {    
+struct CalendarView: View {  
+    @State private var selectedMonth: Int = 0
+    
     var body: some View {
         VStack {
-            CalendarHeader()
+            CalendarHeader(selectedMonth: $selectedMonth)
             CalendarWeekDay()
-            CalendarDayGrid()
+            CalendarDayGrid(selectedMonth: $selectedMonth)
         }
     }
 }

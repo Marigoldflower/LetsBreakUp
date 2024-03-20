@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct LetsBreakUp: View {
     var body: some View {
         LetsBreakUpTabView()
     }
 }
 
 #Preview {
-    ContentView()
+    LetsBreakUpTabView()
 }

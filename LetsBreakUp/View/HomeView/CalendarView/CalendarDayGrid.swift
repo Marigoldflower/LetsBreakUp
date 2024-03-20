@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CalendarDayGrid: View {
-    
-    @State private var selectedMonth: Int = 0
+    @Binding var selectedMonth: Int
+    @State private var selectedDay: CalendarDate?
     
     var body: some View {
         LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7), spacing: 20) {
@@ -63,5 +63,5 @@ struct CalendarDayGrid: View {
 }
 
 #Preview {
-    CalendarDayGrid()
+    CalendarDayGrid(selectedMonth: .constant(0))
 }

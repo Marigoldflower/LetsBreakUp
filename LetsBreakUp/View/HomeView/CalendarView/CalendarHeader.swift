@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct CalendarHeader: View {
+    @Binding var selectedMonth: Int
+    
     var body: some View {
         HStack(spacing: 30) {
             Circle()
                 .stroke(Color.black, lineWidth: 2)
                 .background(Circle().fill(Color.white))
                 .onTapGesture {
-                    print("왼쪽이 눌림")
+                    self.selectedMonth -= 1
                 }
                 .overlay(
                     Image(systemName: "chevron.left")
@@ -24,14 +26,14 @@ struct CalendarHeader: View {
                 )
                 .frame(width: 40, height: 40)
             
-            Text("2024년 3월")
+            Text("\(currentYearAndMonth())")
                 .font(.breakUpFont(size: 20))
             
             Circle()
                 .stroke(Color.black, lineWidth: 2)
                 .background(Circle().fill(Color.white))
                 .onTapGesture {
-                    print("오른쪽이 눌림")
+                    self.selectedMonth += 1
                 }
                 .overlay(
                     Image(systemName: "chevron.right")
@@ -43,8 +45,15 @@ struct CalendarHeader: View {
         }
         .padding(30)
     }
+    
+    private func currentYearAndMonth() -> String {
+           let dateFormatter = DateFormatter()
+           dateFormatter.dateFormat = "YYYY년 M월"
+           let date = Calendar.current.date(byAdding: .month, value: selectedMonth, to: Date())!
+           return dateFormatter.string(from: date)
+       }
 }
 
 #Preview {
-    CalendarHeader()
+    CalendarHeader(selectedMonth: .constant(0))
 }

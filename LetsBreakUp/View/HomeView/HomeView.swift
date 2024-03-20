@@ -14,12 +14,16 @@ struct HomeView: View {
             Color.breakUpBackground
                 .ignoresSafeArea(.all)
             
-            CalendarView()
+            VStack {
+//                LifeQuotesView()
+                CalendarView()
+                DetoxButton()
+            }
         }
         .toolbar {
             // ToolbarItem으로 영역의 위치를 나눠줄 수 있다.
             ToolbarItem(placement: .topBarLeading) {
-                Text("디톡스 실행")
+                Text("디톡스 설정")
                     .font(.breakUpFont(size: 20))
             }
             
@@ -36,7 +40,6 @@ struct HomeView: View {
                 }
             }
         }
-        
     }
 }
 

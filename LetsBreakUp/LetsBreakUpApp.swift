@@ -11,7 +11,7 @@ import SwiftUI
 struct LetsBreakUpApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LetsBreakUp()
         }
     }
 }
