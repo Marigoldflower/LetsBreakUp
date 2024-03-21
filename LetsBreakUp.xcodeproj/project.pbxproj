@@ -28,6 +28,13 @@
 		84AE6E122BA1C59B00749219 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE6E112BA1C59B00749219 /* HomeView.swift */; };
 		84AE6E142BA1C6A400749219 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE6E132BA1C6A400749219 /* SettingView.swift */; };
 		84AE6EAA2BA3CF9100749219 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE6EA92BA3CF9100749219 /* CalendarView.swift */; };
+		84D2EF142BAAD3FA001E8197 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D2EF132BAAD3FA001E8197 /* DeviceActivity.framework */; };
+		84D2EF172BAAD3FA001E8197 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF162BAAD3FA001E8197 /* DeviceActivityMonitorExtension.swift */; };
+		84D2EF1C2BAAD3FA001E8197 /* DeviceActivityMonitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 84D2EF112BAAD3FA001E8197 /* DeviceActivityMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		84D2EF212BAAD5E7001E8197 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D2EF132BAAD3FA001E8197 /* DeviceActivity.framework */; };
+		84D2EF232BAADBD6001E8197 /* AlertNotificationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF222BAADBD6001E8197 /* AlertNotificationListView.swift */; };
+		84D2EF262BAAFACE001E8197 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF252BAAFACE001E8197 /* ProfileView.swift */; };
+		84D2EF292BAB0126001E8197 /* AlertNotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF282BAB0126001E8197 /* AlertNotificationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +52,28 @@
 			remoteGlobalIDString = 84AE6DA72B988C5B00749219;
 			remoteInfo = LetsBreakUp;
 		};
+		84D2EF1A2BAAD3FA001E8197 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84AE6DA02B988C5B00749219 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84D2EF102BAAD3FA001E8197;
+			remoteInfo = DeviceActivityMonitor;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84D2EF1D2BAAD3FA001E8197 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				84D2EF1C2BAAD3FA001E8197 /* DeviceActivityMonitor.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		84995FF32BA975E700DCD4D4 /* 양진체v0.9_ttf.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "양진체v0.9_ttf.ttf"; sourceTree = "<group>"; };
@@ -73,6 +101,14 @@
 		84AE6E112BA1C59B00749219 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		84AE6E132BA1C6A400749219 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		84AE6EA92BA3CF9100749219 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		84D2EF112BAAD3FA001E8197 /* DeviceActivityMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeviceActivityMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D2EF132BAAD3FA001E8197 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
+		84D2EF162BAAD3FA001E8197 /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
+		84D2EF182BAAD3FA001E8197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84D2EF192BAAD3FA001E8197 /* DeviceActivityMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeviceActivityMonitor.entitlements; sourceTree = "<group>"; };
+		84D2EF222BAADBD6001E8197 /* AlertNotificationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotificationListView.swift; sourceTree = "<group>"; };
+		84D2EF252BAAFACE001E8197 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		84D2EF282BAB0126001E8197 /* AlertNotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotificationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D2EF212BAAD5E7001E8197 /* DeviceActivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +131,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84D2EF0E2BAAD3FA001E8197 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D2EF142BAAD3FA001E8197 /* DeviceActivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				84995FFF2BA97CE200DCD4D4 /* CalendarDate.swift */,
+				84D2EF282BAB0126001E8197 /* AlertNotificationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,6 +203,8 @@
 				84AE6DAA2B988C5B00749219 /* LetsBreakUp */,
 				84AE6DBB2B988C5C00749219 /* LetsBreakUpTests */,
 				84AE6DC52B988C5C00749219 /* LetsBreakUpUITests */,
+				84D2EF152BAAD3FA001E8197 /* DeviceActivityMonitor */,
+				84D2EF122BAAD3FA001E8197 /* Frameworks */,
 				84AE6DA92B988C5B00749219 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -167,6 +215,7 @@
 				84AE6DA82B988C5B00749219 /* LetsBreakUp.app */,
 				84AE6DB82B988C5C00749219 /* LetsBreakUpTests.xctest */,
 				84AE6DC22B988C5C00749219 /* LetsBreakUpUITests.xctest */,
+				84D2EF112BAAD3FA001E8197 /* DeviceActivityMonitor.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -236,6 +285,8 @@
 			isa = PBXGroup;
 			children = (
 				84AE6E112BA1C59B00749219 /* HomeView.swift */,
+				84D2EF242BAAF783001E8197 /* AlertNotificationList */,
+				84D2EF272BAAFAD3001E8197 /* ProfileView */,
 				8499600C2BA9BF7F00DCD4D4 /* LifeQuotesView */,
 				849960032BA992CA00DCD4D4 /* CalendarView */,
 				849960092BA9AF9200DCD4D4 /* DetoxButton */,
@@ -251,6 +302,40 @@
 			path = SettingView;
 			sourceTree = "<group>";
 		};
+		84D2EF122BAAD3FA001E8197 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84D2EF132BAAD3FA001E8197 /* DeviceActivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84D2EF152BAAD3FA001E8197 /* DeviceActivityMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				84D2EF162BAAD3FA001E8197 /* DeviceActivityMonitorExtension.swift */,
+				84D2EF182BAAD3FA001E8197 /* Info.plist */,
+				84D2EF192BAAD3FA001E8197 /* DeviceActivityMonitor.entitlements */,
+			);
+			path = DeviceActivityMonitor;
+			sourceTree = "<group>";
+		};
+		84D2EF242BAAF783001E8197 /* AlertNotificationList */ = {
+			isa = PBXGroup;
+			children = (
+				84D2EF222BAADBD6001E8197 /* AlertNotificationListView.swift */,
+			);
+			path = AlertNotificationList;
+			sourceTree = "<group>";
+		};
+		84D2EF272BAAFAD3001E8197 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				84D2EF252BAAFACE001E8197 /* ProfileView.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,10 +346,12 @@
 				84AE6DA42B988C5B00749219 /* Sources */,
 				84AE6DA52B988C5B00749219 /* Frameworks */,
 				84AE6DA62B988C5B00749219 /* Resources */,
+				84D2EF1D2BAAD3FA001E8197 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				84D2EF1B2BAAD3FA001E8197 /* PBXTargetDependency */,
 			);
 			name = LetsBreakUp;
 			productName = LetsBreakUp;
@@ -307,6 +394,23 @@
 			productReference = 84AE6DC22B988C5C00749219 /* LetsBreakUpUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		84D2EF102BAAD3FA001E8197 /* DeviceActivityMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84D2EF202BAAD3FA001E8197 /* Build configuration list for PBXNativeTarget "DeviceActivityMonitor" */;
+			buildPhases = (
+				84D2EF0D2BAAD3FA001E8197 /* Sources */,
+				84D2EF0E2BAAD3FA001E8197 /* Frameworks */,
+				84D2EF0F2BAAD3FA001E8197 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeviceActivityMonitor;
+			productName = DeviceActivityMonitor;
+			productReference = 84D2EF112BAAD3FA001E8197 /* DeviceActivityMonitor.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -328,6 +432,9 @@
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = 84AE6DA72B988C5B00749219;
 					};
+					84D2EF102BAAD3FA001E8197 = {
+						CreatedOnToolsVersion = 15.2;
+					};
 				};
 			};
 			buildConfigurationList = 84AE6DA32B988C5B00749219 /* Build configuration list for PBXProject "LetsBreakUp" */;
@@ -346,6 +453,7 @@
 				84AE6DA72B988C5B00749219 /* LetsBreakUp */,
 				84AE6DB72B988C5C00749219 /* LetsBreakUpTests */,
 				84AE6DC12B988C5C00749219 /* LetsBreakUpUITests */,
+				84D2EF102BAAD3FA001E8197 /* DeviceActivityMonitor */,
 			);
 		};
 /* End PBXProject section */
@@ -375,6 +483,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84D2EF0F2BAAD3FA001E8197 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -382,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D2EF232BAADBD6001E8197 /* AlertNotificationListView.swift in Sources */,
 				849960082BA9AA7500DCD4D4 /* DetoxButton.swift in Sources */,
 				84995FFD2BA97C3100DCD4D4 /* CalendarDayGrid.swift in Sources */,
 				849960002BA97CE200DCD4D4 /* CalendarDate.swift in Sources */,
@@ -390,9 +506,11 @@
 				8499600B2BA9BF7B00DCD4D4 /* LifeQuotesView.swift in Sources */,
 				84995FF92BA97A9E00DCD4D4 /* CalendarHeader.swift in Sources */,
 				84AE6EAA2BA3CF9100749219 /* CalendarView.swift in Sources */,
+				84D2EF262BAAFACE001E8197 /* ProfileView.swift in Sources */,
 				84AE6E102BA1C45D00749219 /* Color.swift in Sources */,
 				84AE6DAE2B988C5B00749219 /* LetsBreakUp.swift in Sources */,
 				849960022BA97FDD00DCD4D4 /* Dates.swift in Sources */,
+				84D2EF292BAB0126001E8197 /* AlertNotificationModel.swift in Sources */,
 				84AE6E142BA1C6A400749219 /* SettingView.swift in Sources */,
 				84AE6E122BA1C59B00749219 /* HomeView.swift in Sources */,
 				84995FFB2BA97ACA00DCD4D4 /* CalendarWeekDay.swift in Sources */,
@@ -417,6 +535,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84D2EF0D2BAAD3FA001E8197 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D2EF172BAAD3FA001E8197 /* DeviceActivityMonitorExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -429,6 +555,11 @@
 			isa = PBXTargetDependency;
 			target = 84AE6DA72B988C5B00749219 /* LetsBreakUp */;
 			targetProxy = 84AE6DC32B988C5C00749219 /* PBXContainerItemProxy */;
+		};
+		84D2EF1B2BAAD3FA001E8197 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84D2EF102BAAD3FA001E8197 /* DeviceActivityMonitor */;
+			targetProxy = 84D2EF1A2BAAD3FA001E8197 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -555,6 +686,7 @@
 		84AE6DCD2B988C5C00749219 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -585,6 +717,7 @@
 		84AE6DCE2B988C5C00749219 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -688,6 +821,58 @@
 			};
 			name = Release;
 		};
+		84D2EF1E2BAAD3FA001E8197 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DeviceActivityMonitor/DeviceActivityMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T9LJ52AQY5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeviceActivityMonitor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DeviceActivityMonitor;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marigold410.LetsBreakUp.DeviceActivityMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84D2EF1F2BAAD3FA001E8197 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DeviceActivityMonitor/DeviceActivityMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T9LJ52AQY5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeviceActivityMonitor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DeviceActivityMonitor;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marigold410.LetsBreakUp.DeviceActivityMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -723,6 +908,15 @@
 			buildConfigurations = (
 				84AE6DD32B988C5C00749219 /* Debug */,
 				84AE6DD42B988C5C00749219 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84D2EF202BAAD3FA001E8197 /* Build configuration list for PBXNativeTarget "DeviceActivityMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84D2EF1E2BAAD3FA001E8197 /* Debug */,
+				84D2EF1F2BAAD3FA001E8197 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

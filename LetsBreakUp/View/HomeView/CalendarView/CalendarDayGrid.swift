@@ -19,6 +19,16 @@ struct CalendarDayGrid: View {
                         Text("\(value.day)")
                             .font(.breakUpFont(size: 15))
                             .foregroundStyle(setColor(with: index))
+                            .onTapGesture {                                
+                                Circle()
+                                    .stroke(Color.black, lineWidth: 2)
+                                    .background(Circle().fill(Color.breakUpYellow))
+                                    .overlay(
+                                        Text("\(value.day)")
+                                            .font(.breakUpFont(size: 15))
+                                    )
+                                    .frame(width: 40, height: 40)
+                            }
                     } else {
                         Text("")
                     }

@@ -16,7 +16,9 @@ struct CalendarHeader: View {
                 .stroke(Color.black, lineWidth: 2)
                 .background(Circle().fill(Color.white))
                 .onTapGesture {
-                    self.selectedMonth -= 1
+                    withAnimation {
+                        self.selectedMonth -= 1
+                    }
                 }
                 .overlay(
                     Image(systemName: "chevron.left")
@@ -33,7 +35,9 @@ struct CalendarHeader: View {
                 .stroke(Color.black, lineWidth: 2)
                 .background(Circle().fill(Color.white))
                 .onTapGesture {
-                    self.selectedMonth += 1
+                    withAnimation {
+                        self.selectedMonth += 1
+                    }
                 }
                 .overlay(
                     Image(systemName: "chevron.right")

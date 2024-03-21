@@ -10,20 +10,15 @@ import SwiftUI
 struct LetsBreakUpTabView: View {
     var body: some View {
         TabView {
-            NavigationStack {
-                HomeView()
-            }
-            .tabItem {
-                Image(systemName: "house")
-            }
+            HomeView()
+                .tabItem {
+                    Image(systemName: "house")
+                }
             
-            NavigationStack {
-                SettingView()
-            }
-            .tabItem {
-                Image(systemName: "gearshape")
-            }
-            
+            SettingView()
+                .tabItem {
+                    Image(systemName: "gearshape")
+                }
         }
         .onAppear {
             let appearance = UITabBarAppearance()
