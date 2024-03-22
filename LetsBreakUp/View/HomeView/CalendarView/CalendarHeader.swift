@@ -16,9 +16,7 @@ struct CalendarHeader: View {
                 .stroke(Color.black, lineWidth: 2)
                 .background(Circle().fill(Color.white))
                 .onTapGesture {
-                    withAnimation {
-                        self.selectedMonth -= 1
-                    }
+                    self.selectedMonth -= 1
                 }
                 .overlay(
                     Image(systemName: "chevron.left")
@@ -35,9 +33,7 @@ struct CalendarHeader: View {
                 .stroke(Color.black, lineWidth: 2)
                 .background(Circle().fill(Color.white))
                 .onTapGesture {
-                    withAnimation {
-                        self.selectedMonth += 1
-                    }
+                    self.selectedMonth += 1
                 }
                 .overlay(
                     Image(systemName: "chevron.right")
@@ -51,11 +47,11 @@ struct CalendarHeader: View {
     }
     
     private func currentYearAndMonth() -> String {
-           let dateFormatter = DateFormatter()
-           dateFormatter.dateFormat = "YYYY년 M월"
-           let date = Calendar.current.date(byAdding: .month, value: selectedMonth, to: Date())!
-           return dateFormatter.string(from: date)
-       }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY년 M월"
+        let date = Calendar.current.date(byAdding: .month, value: selectedMonth, to: Date())!
+        return dateFormatter.string(from: date)
+    }
 }
 
 #Preview {

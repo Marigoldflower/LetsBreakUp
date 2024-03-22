@@ -21,6 +21,7 @@ extension Color {
     static let breakUpBrown = Color(UIColor(red: 0.47, green: 0.29, blue: 0.23, alpha: 1.00))
     static let breakUpPink = Color(UIColor(red: 0.96, green: 0.52, blue: 0.49, alpha: 1.00))
     static let breakUpGray = Color(UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.00))
+    static let breakUpGreenBoard = Color(UIColor(red: 0.13, green: 0.53, blue: 0.45, alpha: 1.00))
 }
 
 

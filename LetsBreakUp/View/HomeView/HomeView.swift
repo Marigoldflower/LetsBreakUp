@@ -19,7 +19,6 @@ struct HomeView: View {
                 
                 VStack {
                     LifeQuotesView()
-    //                LifeQuotesView()
                     CalendarView()
                     DetoxButton()
                 }
