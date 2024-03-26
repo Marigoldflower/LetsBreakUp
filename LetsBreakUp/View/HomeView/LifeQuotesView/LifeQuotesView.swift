@@ -10,7 +10,6 @@ import SwiftUI
 struct LifeQuotesView: View {
     var body: some View {
         ZStack {
-            
             RoundedRectangle(cornerRadius: 18)
                 .fill(Color.breakUpBrown)
                 .stroke(Color.breakUpBlack, lineWidth: 2)

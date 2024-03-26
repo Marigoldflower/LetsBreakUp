@@ -18,7 +18,7 @@ struct HomeView: View {
                     .ignoresSafeArea(.all)
                 
                 VStack {
-                    LifeQuotesView()
+//                    LifeQuotesView()
                     CalendarView()
                     DetoxButton()
                 }

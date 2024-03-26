@@ -35,6 +35,7 @@
 		84D2EF232BAADBD6001E8197 /* AlertNotificationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF222BAADBD6001E8197 /* AlertNotificationListView.swift */; };
 		84D2EF262BAAFACE001E8197 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF252BAAFACE001E8197 /* ProfileView.swift */; };
 		84D2EF292BAB0126001E8197 /* AlertNotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF282BAB0126001E8197 /* AlertNotificationModel.swift */; };
+		84D2EF2B2BB2D716001E8197 /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D2EF2A2BB2D716001E8197 /* FamilyControls.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,8 @@
 		84D2EF222BAADBD6001E8197 /* AlertNotificationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotificationListView.swift; sourceTree = "<group>"; };
 		84D2EF252BAAFACE001E8197 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		84D2EF282BAB0126001E8197 /* AlertNotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotificationModel.swift; sourceTree = "<group>"; };
+		84D2EF2A2BB2D716001E8197 /* FamilyControls.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FamilyControls.framework; path = System/Library/Frameworks/FamilyControls.framework; sourceTree = SDKROOT; };
+		84D2EF2C2BB2D736001E8197 /* LetsBreakUp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LetsBreakUp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D2EF2B2BB2D716001E8197 /* FamilyControls.framework in Frameworks */,
 				84D2EF212BAAD5E7001E8197 /* DeviceActivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +227,7 @@
 		84AE6DAA2B988C5B00749219 /* LetsBreakUp */ = {
 			isa = PBXGroup;
 			children = (
+				84D2EF2C2BB2D736001E8197 /* LetsBreakUp.entitlements */,
 				84995FF52BA9769D00DCD4D4 /* Info.plist */,
 				84AE6DAB2B988C5B00749219 /* LetsBreakUpApp.swift */,
 				84995FF22BA975C100DCD4D4 /* Font */,
@@ -305,6 +310,7 @@
 		84D2EF122BAAD3FA001E8197 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84D2EF2A2BB2D716001E8197 /* FamilyControls.framework */,
 				84D2EF132BAAD3FA001E8197 /* DeviceActivity.framework */,
 			);
 			name = Frameworks;
@@ -689,6 +695,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LetsBreakUp/LetsBreakUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LetsBreakUp/Preview Content\"";
@@ -720,6 +727,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LetsBreakUp/LetsBreakUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LetsBreakUp/Preview Content\"";

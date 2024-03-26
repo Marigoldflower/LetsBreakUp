@@ -11,7 +11,7 @@ struct CalendarView: View {
     @State private var selectedMonth: Int = 0
     
     var body: some View {
-        VStack {
+        VStack(spacing: 15) {
             CalendarHeader(selectedMonth: $selectedMonth)
             CalendarWeekDay()
             CalendarDayGrid(selectedMonth: $selectedMonth)
