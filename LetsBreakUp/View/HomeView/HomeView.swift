@@ -9,6 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @State private var circleBorderColor: Color = Color.clear
+    @State private var circleBackgroundColor: Color = Color.clear
+    
     var body: some View {
         // NavigationStack 전체를 HomeView가 관리하도록 하는 것이 좋음 ⭐️⭐️
         NavigationStack {
@@ -17,11 +20,20 @@ struct HomeView: View {
                 Color.breakUpBackground
                     .ignoresSafeArea(.all)
                 
-                VStack {
-//                    LifeQuotesView()
-                    CalendarView()
-                    DetoxButton()
+                ScrollView(.vertical) {
+                    VStack(spacing: 20) {
+                        CalendarView()
+                        VStack {
+                            CountDownView()
+                            DetoxListView()
+                        }
+                        HStack(spacing: 30) {
+                            DetoxSettingButton()
+                            DetoxCancelButton()
+                        }
+                    }
                 }
+                .scrollIndicators(.hidden)
             }
             .toolbar {
                 // ToolbarItem으로 영역의 위치를 나눠줄 수 있다.

@@ -15,7 +15,7 @@ struct CalendarWeekDay: View {
             ForEach(weekDays, id: \.self) { day in
                 if day == "토" {
                     Text(day)
-                        .foregroundStyle(Color.breakUpMint)
+                        .foregroundStyle(Color.breakUpRed)
                         .font(.breakUpFont(size: 18))
                         .frame(maxWidth: .infinity)
                 } else if day == "일" {

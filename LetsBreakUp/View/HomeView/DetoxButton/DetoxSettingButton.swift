@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import FamilyControls
 
-struct DetoxButton: View {
+struct DetoxSettingButton: View {
+    
+    @State private var isPresented = false
+    @State private var selection = FamilyActivitySelection()
     
     var body: some View {
         Button {
@@ -19,18 +23,20 @@ struct DetoxButton: View {
                 .padding()
         }
         .buttonStyle(.borderedProminent)
-        .tint(.breakUpGray)
+        .tint(.breakUpMint)
         .clipShape(RoundedRectangle(cornerRadius: 18))
         .overlay(
             RoundedRectangle(cornerRadius: 18)
                 .stroke(Color.breakUpBlack, lineWidth: 2)
         )
-        .padding(30)
+        .familyActivityPicker(
+            isPresented: $isPresented,
+            selection: $selection)
         
         
     }
 }
 
 #Preview {
-    DetoxButton()
+    DetoxSettingButton()
 }

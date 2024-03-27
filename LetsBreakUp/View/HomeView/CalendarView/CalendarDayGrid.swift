@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CalendarDayGrid: View {
     @Binding var selectedMonth: Int
-    @State private var selectedDay: CalendarDate?
     
     var body: some View {
         LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7), spacing: 20) {
@@ -21,13 +20,13 @@ struct CalendarDayGrid: View {
                             .foregroundStyle(setColor(with: index))
                             .background(
                                 Circle()
-                                    .stroke(Color.black, lineWidth: 2)
-                                    .background(Circle().fill(Color.breakUpGray))
+                                    .stroke(isToday(date: value.date) ? Color.black : Color.clear, lineWidth: 2)
+                                    .background(isToday(date: value.date) ? Circle().fill(Color.breakUpViolet) : Circle().fill(Color.clear))
                                     .overlay(
                                         Text("\(value.day)")
                                             .font(.breakUpFont(size: 15))
                                     )
-                                    .frame(width: 33, height: 33)
+                                    .frame(width: 40, height: 40)
                                     
                                 )
                     } else {
@@ -66,10 +65,15 @@ struct CalendarDayGrid: View {
         if index % 7 == 0 {
             return .breakUpRed
         } else if (index + 1) % 7 == 0 {
-            return .breakUpMint
+            return .breakUpRed
         } else {
             return .breakUpBlack
         }
+    }
+    
+    private func isToday(date: Date) -> Bool {
+        let calendar = Calendar.current
+        return calendar.isDateInToday(date)
     }
 }
 
