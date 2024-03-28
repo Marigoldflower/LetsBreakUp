@@ -6,16 +6,14 @@
 //
 
 import SwiftUI
-import FamilyControls
 
 struct DetoxSettingButton: View {
     
-    @State private var isPresented = false
-    @State private var selection = FamilyActivitySelection()
+    @State private var presentDetoxSettingView = false
     
     var body: some View {
         Button {
-            
+            presentDetoxSettingView = true
         } label: {
             Text("디톡스 설정하기")
                 .foregroundStyle(Color.breakUpBlack)
@@ -29,11 +27,9 @@ struct DetoxSettingButton: View {
             RoundedRectangle(cornerRadius: 18)
                 .stroke(Color.breakUpBlack, lineWidth: 2)
         )
-        .familyActivityPicker(
-            isPresented: $isPresented,
-            selection: $selection)
-        
-        
+        .fullScreenCover(isPresented: $presentDetoxSettingView) {
+            DetoxSettingView()
+        }
     }
 }
 
