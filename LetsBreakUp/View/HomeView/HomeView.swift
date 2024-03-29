@@ -21,8 +21,10 @@ struct HomeView: View {
                     .ignoresSafeArea(.all)
                 
                 ScrollView(.vertical) {
-                    VStack(spacing: 20) {
+                    VStack {
                         CalendarView()
+                            .padding(15)
+                        
                         VStack {
                             CountDownView()
                             DetoxListView()
@@ -38,7 +40,7 @@ struct HomeView: View {
             .toolbar {
                 // ToolbarItem으로 영역의 위치를 나눠줄 수 있다.
                 ToolbarItem(placement: .topBarLeading) {
-                    Text("디톡스 설정")
+                    Text("홈 화면")
                         .font(.breakUpFont(size: 20))
                 }
                 

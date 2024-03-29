@@ -40,17 +40,35 @@ struct CalendarDayGrid: View {
     
     private func fetchDates() -> [CalendarDate] {
         let calendar = Calendar.current
-        let currentMonth = fetchSelectedMonth()
         
-        var dates = currentMonth.datesOfMonth().map { CalendarDate(day: calendar.component(.day, from: $0), date: $0)}
-        
-        let firstDayOfWeek = calendar.component(.weekday, from: dates.first?.date ?? Date())
-        
-        for _ in 0..<firstDayOfWeek - 1 {
-            dates.insert(CalendarDate(day: -1, date: Date()), at: 0)
-        }
-        
-        return dates
+        // 현재 주를 가져오기 위한 로직
+                let today = Date()
+                let weekInterval = calendar.dateInterval(of: .weekOfMonth, for: today)!
+                
+                let startOfWeek = weekInterval.start
+                let endOfWeek = weekInterval.end
+                
+                var dates: [CalendarDate] = []
+                
+                var currentDate = startOfWeek
+                while currentDate < endOfWeek {
+                    let day = calendar.component(.day, from: currentDate)
+                    dates.append(CalendarDate(day: day, date: currentDate))
+                    currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate)!
+                }
+                
+                return dates
+//        let currentMonth = fetchSelectedMonth()
+//        
+//        var dates = currentMonth.datesOfMonth().map { CalendarDate(day: calendar.component(.day, from: $0), date: $0)}
+//        
+//        let firstDayOfWeek = calendar.component(.weekday, from: dates.first?.date ?? Date())
+//        
+//        for _ in 0..<firstDayOfWeek - 1 {
+//            dates.insert(CalendarDate(day: -1, date: Date()), at: 0)
+//        }
+//        
+//        return dates
     }
     
     private func fetchSelectedMonth() -> Date {

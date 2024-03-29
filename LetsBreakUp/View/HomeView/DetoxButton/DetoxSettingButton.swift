@@ -9,12 +9,8 @@ import SwiftUI
 
 struct DetoxSettingButton: View {
     
-    @State private var presentDetoxSettingView = false
-    
     var body: some View {
-        Button {
-            presentDetoxSettingView = true
-        } label: {
+        NavigationLink(destination: DetoxSettingView()) {
             Text("디톡스 설정하기")
                 .foregroundStyle(Color.breakUpBlack)
                 .font(.breakUpFont(size: 16))
@@ -27,9 +23,24 @@ struct DetoxSettingButton: View {
             RoundedRectangle(cornerRadius: 18)
                 .stroke(Color.breakUpBlack, lineWidth: 2)
         )
-        .fullScreenCover(isPresented: $presentDetoxSettingView) {
-            DetoxSettingView()
-        }
+        
+        
+//        
+//        Button {
+//            
+//        } label: {
+//            Text("디톡스 설정하기")
+//                .foregroundStyle(Color.breakUpBlack)
+//                .font(.breakUpFont(size: 16))
+//                .padding()
+//        }
+//        .buttonStyle(.borderedProminent)
+//        .tint(.breakUpMint)
+//        .clipShape(RoundedRectangle(cornerRadius: 18))
+//        .overlay(
+//            RoundedRectangle(cornerRadius: 18)
+//                .stroke(Color.breakUpBlack, lineWidth: 2)
+//        )
     }
 }
 

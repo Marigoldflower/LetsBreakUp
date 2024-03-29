@@ -12,7 +12,14 @@ struct DetoxSettingView: View {
     
     var body: some View {
         NavigationStack {
-            
+            ZStack {
+                Color.breakUpBackground
+                    .ignoresSafeArea(.all)
+                
+                VStack {
+                    LifeQuotesView()
+                }
+            }
         }
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
@@ -33,11 +40,11 @@ struct DetoxSettingView: View {
             
             // principal이 중앙에 놓는 방법임 ⭐️
             ToolbarItem(placement: .principal) {
-                Text("알림")
+                Text("디톡스 설정")
                     .font(.breakUpFont(size: 17))
             }
         }
-//        .navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

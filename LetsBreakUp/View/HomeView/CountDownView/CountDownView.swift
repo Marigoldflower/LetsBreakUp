@@ -25,7 +25,7 @@ struct CountDownView: View {
                             
                             VStack(spacing: 10) {
                                 HStack {
-                                    Text("시작 시간 -")
+                                    Text("디톡스 시작 시간 -")
                                         .font(.breakUpFont(size: 20))
                                         .foregroundStyle(Color.breakUpBlack)
                                     Text("03:00")
@@ -34,7 +34,7 @@ struct CountDownView: View {
                                 }
                                 
                                 HStack {
-                                    Text("종료 시간 -")
+                                    Text("디톡스 종료 시간 -")
                                         .font(.breakUpFont(size: 20))
                                         .foregroundStyle(Color.breakUpBlack)
                                     Text("05:00")

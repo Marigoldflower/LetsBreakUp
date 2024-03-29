@@ -12,7 +12,7 @@ struct CalendarView: View {
     
     var body: some View {
         VStack(spacing: 15) {
-            CalendarHeader(selectedMonth: $selectedMonth)
+//            CalendarHeader(selectedMonth: $selectedMonth)
             CalendarWeekDay()
             CalendarDayGrid(selectedMonth: $selectedMonth)
         }
