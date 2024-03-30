@@ -16,8 +16,11 @@ struct DetoxSettingView: View {
                 Color.breakUpBackground
                     .ignoresSafeArea(.all)
                 
-                VStack {
-                    LifeQuotesView()
+                ScrollView(.vertical) {
+                    VStack(spacing: 20) {
+                        LifeQuotesView()
+                        StoppingAppView()
+                    }
                 }
             }
         }

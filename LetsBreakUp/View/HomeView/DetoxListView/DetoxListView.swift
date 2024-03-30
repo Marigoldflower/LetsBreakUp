@@ -14,13 +14,13 @@ struct DetoxListView: View {
         RoundedRectangle(cornerRadius: 18)
             .fill(Color.breakUpYellow)
             .stroke(Color.breakUpBlack, lineWidth: 2)
-            .frame(width: .infinity, height: 140)
+            .frame(height: 140)
             .padding()
             .overlay {
                 RoundedRectangle(cornerRadius: 18)
                     .fill(Color.breakUpBackground)
                     .stroke(Color.breakUpBlack, lineWidth: 2)
-                    .frame(width: .infinity, height: 120)// 높이 110
+                    .frame(height: 120)// 높이 110
                     .padding(30)
                     .overlay {
                         VStack(spacing: 30) {

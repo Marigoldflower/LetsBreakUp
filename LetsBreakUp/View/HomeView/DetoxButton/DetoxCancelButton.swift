@@ -18,7 +18,7 @@ struct DetoxCancelButton: View {
                 .padding()
         }
         .buttonStyle(.borderedProminent)
-        .tint(.breakUpPink)
+        .tint(.breakUpGray)
         .clipShape(RoundedRectangle(cornerRadius: 18))
         .overlay(
             RoundedRectangle(cornerRadius: 18)

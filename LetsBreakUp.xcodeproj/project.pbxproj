@@ -40,6 +40,8 @@
 		84D2EF312BB2F452001E8197 /* DetoxCancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF302BB2F452001E8197 /* DetoxCancelButton.swift */; };
 		84D2EF332BB2FC75001E8197 /* DetoxListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF322BB2FC75001E8197 /* DetoxListView.swift */; };
 		84D2EF362BB5A38D001E8197 /* DetoxSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF352BB5A38D001E8197 /* DetoxSettingView.swift */; };
+		84D2EF392BB69531001E8197 /* StoppingAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF382BB69531001E8197 /* StoppingAppView.swift */; };
+		84D2EF402BB7ECE0001E8197 /* StoppingAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF3F2BB7ECDF001E8197 /* StoppingAppViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +122,8 @@
 		84D2EF302BB2F452001E8197 /* DetoxCancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetoxCancelButton.swift; sourceTree = "<group>"; };
 		84D2EF322BB2FC75001E8197 /* DetoxListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetoxListView.swift; sourceTree = "<group>"; };
 		84D2EF352BB5A38D001E8197 /* DetoxSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetoxSettingView.swift; sourceTree = "<group>"; };
+		84D2EF382BB69531001E8197 /* StoppingAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoppingAppView.swift; sourceTree = "<group>"; };
+		84D2EF3F2BB7ECDF001E8197 /* StoppingAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoppingAppViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +243,7 @@
 				84D2EF2C2BB2D736001E8197 /* LetsBreakUp.entitlements */,
 				84995FF52BA9769D00DCD4D4 /* Info.plist */,
 				84AE6DAB2B988C5B00749219 /* LetsBreakUpApp.swift */,
+				84D2EF3E2BB7EADA001E8197 /* ViewModel */,
 				84995FF22BA975C100DCD4D4 /* Font */,
 				84AE6DD82BA096F600749219 /* Helpers */,
 				84995FFE2BA97CCF00DCD4D4 /* Model */,
@@ -302,7 +307,6 @@
 				84AE6E112BA1C59B00749219 /* HomeView.swift */,
 				84D2EF242BAAF783001E8197 /* AlertNotificationList */,
 				84D2EF272BAAFAD3001E8197 /* ProfileView */,
-				8499600C2BA9BF7F00DCD4D4 /* LifeQuotesView */,
 				849960032BA992CA00DCD4D4 /* CalendarView */,
 				84D2EF2F2BB2F3FD001E8197 /* CountDownView */,
 				84D2EF342BB2FC97001E8197 /* DetoxListView */,
@@ -374,8 +378,18 @@
 			isa = PBXGroup;
 			children = (
 				84D2EF352BB5A38D001E8197 /* DetoxSettingView.swift */,
+				84D2EF382BB69531001E8197 /* StoppingAppView.swift */,
+				8499600C2BA9BF7F00DCD4D4 /* LifeQuotesView */,
 			);
 			path = DetoxSettingView;
+			sourceTree = "<group>";
+		};
+		84D2EF3E2BB7EADA001E8197 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84D2EF3F2BB7ECDF001E8197 /* StoppingAppViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -545,6 +559,7 @@
 				84995FFD2BA97C3100DCD4D4 /* CalendarDayGrid.swift in Sources */,
 				849960002BA97CE200DCD4D4 /* CalendarDate.swift in Sources */,
 				84D2EF332BB2FC75001E8197 /* DetoxListView.swift in Sources */,
+				84D2EF402BB7ECE0001E8197 /* StoppingAppViewModel.swift in Sources */,
 				84995FF72BA976DF00DCD4D4 /* Fonts.swift in Sources */,
 				84AE6DD62B988FF500749219 /* LetsBreakUpTabView.swift in Sources */,
 				8499600B2BA9BF7B00DCD4D4 /* LifeQuotesView.swift in Sources */,
@@ -556,6 +571,7 @@
 				84AE6DAE2B988C5B00749219 /* LetsBreakUp.swift in Sources */,
 				849960022BA97FDD00DCD4D4 /* Dates.swift in Sources */,
 				84D2EF292BAB0126001E8197 /* AlertNotificationModel.swift in Sources */,
+				84D2EF392BB69531001E8197 /* StoppingAppView.swift in Sources */,
 				84AE6E142BA1C6A400749219 /* SettingView.swift in Sources */,
 				84D2EF312BB2F452001E8197 /* DetoxCancelButton.swift in Sources */,
 				84AE6E122BA1C59B00749219 /* HomeView.swift in Sources */,
