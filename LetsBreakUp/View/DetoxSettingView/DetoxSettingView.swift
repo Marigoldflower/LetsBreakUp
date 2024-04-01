@@ -10,6 +10,11 @@ import SwiftUI
 struct DetoxSettingView: View {
     @Environment(\.dismiss) var dismiss
     
+    // 
+    @Binding var startTime: String
+    @Binding var endTime: String
+    
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -20,8 +25,35 @@ struct DetoxSettingView: View {
                     VStack(spacing: 20) {
                         LifeQuotesView()
                         StoppingAppView()
+                        TimeSettingView()
+                        AlertNotificationView()
                     }
                 }
+                
+                VStack {
+                    Spacer()
+                    
+                    Button {
+                        
+                        dismiss()
+                    } label: {
+                        Text("확인")
+                            .foregroundStyle(Color.breakUpBlack)
+                            .font(.breakUpFont(size: 16))
+                            .padding()
+                            .frame(maxWidth: .infinity) // 버튼의 Text에까지 Width 값을 구현해주어야 비로소 버튼의 Width가 넓어질 수 있다.
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(.breakUpMint)
+                    .clipShape(RoundedRectangle(cornerRadius: 18))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 18)
+                            .stroke(Color.breakUpBlack, lineWidth: 2)
+                    )
+                    .padding(.horizontal, 30)
+                    .padding(.bottom, 20)
+                }
+
             }
         }
         .toolbar {
@@ -52,5 +84,5 @@ struct DetoxSettingView: View {
 }
 
 #Preview {
-    DetoxSettingView()
+    DetoxSettingView(startTime: <#Binding<String>#>, endTime: <#Binding<String>#>)
 }

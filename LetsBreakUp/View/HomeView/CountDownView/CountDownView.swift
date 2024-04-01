@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct CountDownView: View {
+    @Binding var startDetoxTime: String
+    @Binding var endDetoxTime: String
+    
     var body: some View {
         RoundedRectangle(cornerRadius: 18)
             .fill(Color.breakUpYellow)
             .stroke(Color.breakUpBlack, lineWidth: 2)
-            .frame(width: .infinity, height: 260)
+            .frame(height: 260)
             .padding()
             .overlay {
                 RoundedRectangle(cornerRadius: 18)
                     .fill(Color.breakUpBackground)
                     .stroke(Color.breakUpBlack, lineWidth: 2)
-                    .frame(width: .infinity, height: 240)// 높이 110
+                    .frame(height: 240)// 높이 110
                     .padding(30)
                     .overlay {
                         VStack(spacing: 30) {
@@ -28,7 +31,7 @@ struct CountDownView: View {
                                     Text("디톡스 시작 시간 -")
                                         .font(.breakUpFont(size: 20))
                                         .foregroundStyle(Color.breakUpBlack)
-                                    Text("03:00")
+                                    Text(startDetoxTime)
                                         .font(.breakUpFont(size: 23))
                                         .foregroundStyle(Color.breakUpOrange)
                                 }
@@ -37,7 +40,7 @@ struct CountDownView: View {
                                     Text("디톡스 종료 시간 -")
                                         .font(.breakUpFont(size: 20))
                                         .foregroundStyle(Color.breakUpBlack)
-                                    Text("05:00")
+                                    Text(endDetoxTime)
                                         .font(.breakUpFont(size: 23))
                                         .foregroundStyle(Color.breakUpOrange)
                                 }
@@ -47,7 +50,7 @@ struct CountDownView: View {
                                 Text("종료시간까지")
                                     .font(.breakUpFont(size: 30))
                                     .foregroundStyle(Color.breakUpBlack)
-                                Text("05:00:00 남음")
+                                Text("\(calculateTimeRemaining())")
                                     .font(.breakUpFont(size: 30))
                                     .foregroundStyle(Color.breakUpRed)
                             }
@@ -55,8 +58,27 @@ struct CountDownView: View {
                     }
             }
     }
+    
+    func calculateTimeRemaining() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        
+        guard let startDate = formatter.date(from: startDetoxTime) else { return "" }
+        guard let endDate = formatter.date(from: endDetoxTime) else { return "" }
+        
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.hour, .minute], from: startDate, to: endDate)
+        
+        guard let hour = components.hour else { return "" }
+        guard let minute = components.minute else { return "" }
+        
+        // 결과를 "HH:mm:ss" 형식으로 변환합니다. 이 경우 초(second)는 항상 "00"으로 표시됩니다.
+        let resultString = String(format: "%02d:%02d:00", hour, minute)
+        
+        return resultString
+    }
 }
 
 #Preview {
-    CountDownView()
+    CountDownView(startDetoxTime: .constant(""), endDetoxTime: .constant(""))
 }

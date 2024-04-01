@@ -12,6 +12,10 @@ struct HomeView: View {
     @State private var circleBorderColor: Color = Color.clear
     @State private var circleBackgroundColor: Color = Color.clear
     
+    // HomeView에서 사용할 디톡스 시작시간과 종료시간
+    @State var startDetoxTime = "02:00"
+    @State var endDetoxTime = "04:00"
+    
     var body: some View {
         // NavigationStack 전체를 HomeView가 관리하도록 하는 것이 좋음 ⭐️⭐️
         NavigationStack {

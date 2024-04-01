@@ -25,7 +25,7 @@ struct DetoxListView: View {
                     .overlay {
                         VStack(spacing: 30) {
                             if detoxAppCount == 0 {
-                                Text("선택된 디톡스 앱이 없습니다")
+                                Text("선택된 디톡스 앱이 없습니다.")
                                     .font(.breakUpFont(size: 15))
                                     .foregroundStyle(Color.breakUpBlack)
                                 

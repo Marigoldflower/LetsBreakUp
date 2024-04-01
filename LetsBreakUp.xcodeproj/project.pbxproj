@@ -42,6 +42,8 @@
 		84D2EF362BB5A38D001E8197 /* DetoxSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF352BB5A38D001E8197 /* DetoxSettingView.swift */; };
 		84D2EF392BB69531001E8197 /* StoppingAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF382BB69531001E8197 /* StoppingAppView.swift */; };
 		84D2EF402BB7ECE0001E8197 /* StoppingAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF3F2BB7ECDF001E8197 /* StoppingAppViewModel.swift */; };
+		84D2EF432BB809CF001E8197 /* TimeSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF422BB809CF001E8197 /* TimeSettingView.swift */; };
+		84D2EF462BB8148B001E8197 /* AlertNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF452BB8148B001E8197 /* AlertNotificationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +126,8 @@
 		84D2EF352BB5A38D001E8197 /* DetoxSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetoxSettingView.swift; sourceTree = "<group>"; };
 		84D2EF382BB69531001E8197 /* StoppingAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoppingAppView.swift; sourceTree = "<group>"; };
 		84D2EF3F2BB7ECDF001E8197 /* StoppingAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoppingAppViewModel.swift; sourceTree = "<group>"; };
+		84D2EF422BB809CF001E8197 /* TimeSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingView.swift; sourceTree = "<group>"; };
+		84D2EF452BB8148B001E8197 /* AlertNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotificationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -378,8 +382,10 @@
 			isa = PBXGroup;
 			children = (
 				84D2EF352BB5A38D001E8197 /* DetoxSettingView.swift */,
-				84D2EF382BB69531001E8197 /* StoppingAppView.swift */,
 				8499600C2BA9BF7F00DCD4D4 /* LifeQuotesView */,
+				84D2EF412BB8099A001E8197 /* StoppingAppView */,
+				84D2EF442BB809D7001E8197 /* TimeSettingView */,
+				84D2EF472BB814A2001E8197 /* AlertNotificationView */,
 			);
 			path = DetoxSettingView;
 			sourceTree = "<group>";
@@ -390,6 +396,30 @@
 				84D2EF3F2BB7ECDF001E8197 /* StoppingAppViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84D2EF412BB8099A001E8197 /* StoppingAppView */ = {
+			isa = PBXGroup;
+			children = (
+				84D2EF382BB69531001E8197 /* StoppingAppView.swift */,
+			);
+			path = StoppingAppView;
+			sourceTree = "<group>";
+		};
+		84D2EF442BB809D7001E8197 /* TimeSettingView */ = {
+			isa = PBXGroup;
+			children = (
+				84D2EF422BB809CF001E8197 /* TimeSettingView.swift */,
+			);
+			path = TimeSettingView;
+			sourceTree = "<group>";
+		};
+		84D2EF472BB814A2001E8197 /* AlertNotificationView */ = {
+			isa = PBXGroup;
+			children = (
+				84D2EF452BB8148B001E8197 /* AlertNotificationView.swift */,
+			);
+			path = AlertNotificationView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -553,6 +583,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D2EF462BB8148B001E8197 /* AlertNotificationView.swift in Sources */,
 				84D2EF2E2BB2F3F5001E8197 /* CountDownView.swift in Sources */,
 				84D2EF232BAADBD6001E8197 /* AlertNotificationListView.swift in Sources */,
 				849960082BA9AA7500DCD4D4 /* DetoxSettingButton.swift in Sources */,
@@ -577,6 +608,7 @@
 				84AE6E122BA1C59B00749219 /* HomeView.swift in Sources */,
 				84995FFB2BA97ACA00DCD4D4 /* CalendarWeekDay.swift in Sources */,
 				84AE6DAC2B988C5B00749219 /* LetsBreakUpApp.swift in Sources */,
+				84D2EF432BB809CF001E8197 /* TimeSettingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,7 @@ import SwiftUI
 class StoppingAppViewModel: ObservableObject {
     static let shared = StoppingAppViewModel()
     let store = ManagedSettingsStore()
-    var selection = FamilyActivitySelection()
+    @State var selection = FamilyActivitySelection()
     
     private init() {}
     
@@ -23,7 +23,6 @@ class StoppingAppViewModel: ObservableObject {
             print ("got here \(newValue)")
             let applications = newValue.applicationTokens
             let categories = newValue.categoryTokens
-            //let webCategories = newValue.webDomainTokens
             store.shield.applications = applications.isEmpty ? nil : applications
             store.shield.applicationCategories = ShieldSettings.ActivityCategoryPolicy.specific(categories, except: Set())
             store.shield.webDomainCategories = ShieldSettings.ActivityCategoryPolicy.specific(categories, except: Set())
