@@ -13,8 +13,8 @@ struct HomeView: View {
     @State private var circleBackgroundColor: Color = Color.clear
     
     // HomeView에서 사용할 디톡스 시작시간과 종료시간
-    @State var startDetoxTime = "02:00"
-    @State var endDetoxTime = "04:00"
+    @State var startDetoxTime = ""
+    @State var endDetoxTime = ""
     
     var body: some View {
         // NavigationStack 전체를 HomeView가 관리하도록 하는 것이 좋음 ⭐️⭐️
@@ -30,11 +30,11 @@ struct HomeView: View {
                             .padding(15)
                         
                         VStack {
-                            CountDownView()
+                            CountDownView(startDetoxTime: $startDetoxTime, endDetoxTime: $endDetoxTime)
                             DetoxListView()
                         }
                         HStack(spacing: 30) {
-                            DetoxSettingButton()
+                            DetoxSettingButton(startTime: $startDetoxTime, endTime: $endDetoxTime)
                             DetoxCancelButton()
                         }
                     }
@@ -67,6 +67,28 @@ struct HomeView: View {
                 }
             }
         }
+        .onAppear {
+            startDetoxTime = updateStartDetoxTime()
+            endDetoxTime = updateEndDetoxTime()
+        }
+    }
+    
+    private func updateStartDetoxTime() -> String {
+        let now = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let startDetoxTime = dateFormatter.string(from: now)
+        
+        return startDetoxTime
+    }
+    
+    private func updateEndDetoxTime() -> String {
+        let oneHourAfter = Date().addingTimeInterval(3600)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let endDetoxTime = dateFormatter.string(from: oneHourAfter)
+        
+        return endDetoxTime
     }
 }
 

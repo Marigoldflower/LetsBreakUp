@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct TimeSettingView: View {
-    @State private var startSelectedTime = Date()
-    @State private var endSelectedTime = Date().addingTimeInterval(3600)
+    @Binding var startTime: Date
+    @Binding var endtime: Date
     
     var body: some View {
         VStack {
@@ -21,7 +21,7 @@ struct TimeSettingView: View {
                 
                 Spacer()
                 
-                DatePicker("시간 선택", selection: $startSelectedTime, displayedComponents: .hourAndMinute)
+                DatePicker("시간 선택", selection: $startTime, displayedComponents: .hourAndMinute)
                     .labelsHidden()
                     .padding(.trailing, 20)
             }
@@ -34,7 +34,7 @@ struct TimeSettingView: View {
                 
                 Spacer()
                 
-                DatePicker("시간 선택", selection: $endSelectedTime, displayedComponents: .hourAndMinute)
+                DatePicker("시간 선택", selection: $endtime, displayedComponents: .hourAndMinute)
                     .labelsHidden()
                     .padding(.trailing, 20)
             }
@@ -43,5 +43,5 @@ struct TimeSettingView: View {
 }
 
 #Preview {
-    TimeSettingView()
+    TimeSettingView(startTime: .constant(Date.now), endtime: .constant(Date.now))
 }

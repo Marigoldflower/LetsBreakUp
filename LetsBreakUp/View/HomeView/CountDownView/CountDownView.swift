@@ -31,6 +31,7 @@ struct CountDownView: View {
                                     Text("디톡스 시작 시간 -")
                                         .font(.breakUpFont(size: 20))
                                         .foregroundStyle(Color.breakUpBlack)
+                                    
                                     Text(startDetoxTime)
                                         .font(.breakUpFont(size: 23))
                                         .foregroundStyle(Color.breakUpOrange)
@@ -59,7 +60,7 @@ struct CountDownView: View {
             }
     }
     
-    func calculateTimeRemaining() -> String {
+    private func calculateTimeRemaining() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
         

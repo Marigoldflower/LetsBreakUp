@@ -10,10 +10,12 @@ import SwiftUI
 struct DetoxSettingView: View {
     @Environment(\.dismiss) var dismiss
     
-    // 
+    //
     @Binding var startTime: String
     @Binding var endTime: String
     
+    @State private var startSelectedTime = Date()
+    @State private var endSelectedTime = Date().addingTimeInterval(3600)
     
     var body: some View {
         NavigationStack {
@@ -25,7 +27,7 @@ struct DetoxSettingView: View {
                     VStack(spacing: 20) {
                         LifeQuotesView()
                         StoppingAppView()
-                        TimeSettingView()
+                        TimeSettingView(startTime: $startSelectedTime, endtime: $endSelectedTime)
                         AlertNotificationView()
                     }
                 }
@@ -34,6 +36,11 @@ struct DetoxSettingView: View {
                     Spacer()
                     
                     Button {
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateFormat = "HH:mm"
+                        
+                        startTime = dateFormatter.string(from: startSelectedTime)
+                        endTime = dateFormatter.string(from: endSelectedTime)
                         
                         dismiss()
                     } label: {
@@ -84,5 +91,5 @@ struct DetoxSettingView: View {
 }
 
 #Preview {
-    DetoxSettingView(startTime: <#Binding<String>#>, endTime: <#Binding<String>#>)
+    DetoxSettingView(startTime: .constant(""), endTime: .constant(""))
 }
