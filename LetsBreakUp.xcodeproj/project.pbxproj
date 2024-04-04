@@ -44,6 +44,7 @@
 		84D2EF402BB7ECE0001E8197 /* StoppingAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF3F2BB7ECDF001E8197 /* StoppingAppViewModel.swift */; };
 		84D2EF432BB809CF001E8197 /* TimeSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF422BB809CF001E8197 /* TimeSettingView.swift */; };
 		84D2EF462BB8148B001E8197 /* AlertNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF452BB8148B001E8197 /* AlertNotificationView.swift */; };
+		84D2EF492BBEB6CE001E8197 /* Extension + Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2EF482BBEB6CE001E8197 /* Extension + Bundle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		84D2EF3F2BB7ECDF001E8197 /* StoppingAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoppingAppViewModel.swift; sourceTree = "<group>"; };
 		84D2EF422BB809CF001E8197 /* TimeSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingView.swift; sourceTree = "<group>"; };
 		84D2EF452BB8148B001E8197 /* AlertNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotificationView.swift; sourceTree = "<group>"; };
+		84D2EF482BBEB6CE001E8197 /* Extension + Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Bundle.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +303,7 @@
 				84AE6E0F2BA1C45D00749219 /* Color.swift */,
 				84995FF62BA976DF00DCD4D4 /* Fonts.swift */,
 				849960012BA97FDD00DCD4D4 /* Dates.swift */,
+				84D2EF482BBEB6CE001E8197 /* Extension + Bundle.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 				84D2EF332BB2FC75001E8197 /* DetoxListView.swift in Sources */,
 				84D2EF402BB7ECE0001E8197 /* StoppingAppViewModel.swift in Sources */,
 				84995FF72BA976DF00DCD4D4 /* Fonts.swift in Sources */,
+				84D2EF492BBEB6CE001E8197 /* Extension + Bundle.swift in Sources */,
 				84AE6DD62B988FF500749219 /* LetsBreakUpTabView.swift in Sources */,
 				8499600B2BA9BF7B00DCD4D4 /* LifeQuotesView.swift in Sources */,
 				84995FF92BA97A9E00DCD4D4 /* CalendarHeader.swift in Sources */,

@@ -7,11 +7,14 @@
 
 import SwiftUI
 import FamilyControls
+import ManagedSettings
 
 struct StoppingAppView: View {
     @ObservedObject var stoppingAppViewModel = StoppingAppViewModel.shared
     @State var isPresented = false
     @State private var detoxAppCount = 0
+    @State var selection = FamilyActivitySelection()
+    
     let columns = [
         GridItem(.fixed(56)),
         GridItem(.fixed(56)),
@@ -65,10 +68,10 @@ struct StoppingAppView: View {
     
     private func selectedAppListView() -> some View {
         VStack {
-            if (stoppingAppViewModel.selection.applicationTokens.count > 0 || stoppingAppViewModel.selection.categoryTokens.count > 0) {
+            if (selection.applicationTokens.count > 0 || selection.categoryTokens.count > 0) {
                 LazyVGrid(columns: columns, alignment: .leading) {
-                    if stoppingAppViewModel.selection.applicationTokens.count > 0 {
-                        ForEach(Array(stoppingAppViewModel.selection.applicationTokens), id: \.self) {
+                    if selection.applicationTokens.count > 0 {
+                        ForEach(Array(selection.applicationTokens), id: \.self) {
                             token in
                             HStack {
                                 Label(token)
@@ -78,8 +81,8 @@ struct StoppingAppView: View {
                             .frame(width: 56, height: 56)
                         }
                     }
-                    if stoppingAppViewModel.selection.categoryTokens.count > 0 {
-                        ForEach(Array(stoppingAppViewModel.selection.categoryTokens), id: \.self) {
+                    if selection.categoryTokens.count > 0 {
+                        ForEach(Array(selection.categoryTokens), id: \.self) {
                             token in
                             HStack {
                                 Label(token)
@@ -105,6 +108,9 @@ struct StoppingAppView: View {
             }
         }
         .padding()
+        .onAppear {
+            selection = stoppingAppViewModel.selection
+        }
         
     }
 }
