@@ -12,8 +12,7 @@ import ManagedSettings
 import SwiftUI
 
 class StoppingAppViewModel: ObservableObject {
-    @AppStorage("selection", store: UserDefaults(suiteName: Bundle.main.appGroupName)) var selection = FamilyActivitySelection()
-    
+
     static let shared = StoppingAppViewModel()
     let store = ManagedSettingsStore()
     

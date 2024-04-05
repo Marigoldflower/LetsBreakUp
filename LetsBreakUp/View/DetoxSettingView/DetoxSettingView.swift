@@ -10,7 +10,6 @@ import SwiftUI
 struct DetoxSettingView: View {
     @Environment(\.dismiss) var dismiss
     
-    //
     @Binding var startTime: String
     @Binding var endTime: String
     
@@ -29,6 +28,11 @@ struct DetoxSettingView: View {
                         StoppingAppView()
                         TimeSettingView(startTime: $startSelectedTime, endtime: $endSelectedTime)
                         AlertNotificationView()
+                        
+                        // 약간의 여백을 주어 확인 버튼과 겹치지 않게 하기 위함 ⭐️
+                        Rectangle()
+                            .frame(height: 140)
+                            .foregroundStyle(Color.breakUpBackground)
                     }
                 }
                 

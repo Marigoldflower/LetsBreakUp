@@ -16,11 +16,11 @@ struct StoppingAppView: View {
     @State var selection = FamilyActivitySelection()
     
     let columns = [
-        GridItem(.fixed(56)),
-        GridItem(.fixed(56)),
-        GridItem(.fixed(56)),
-        GridItem(.fixed(56)),
-        GridItem(.fixed(56))
+        GridItem(.fixed(45)),
+        GridItem(.fixed(45)),
+        GridItem(.fixed(45)),
+        GridItem(.fixed(45)),
+        GridItem(.fixed(45))
     ]
     
     var body: some View {
@@ -44,25 +44,28 @@ struct StoppingAppView: View {
                             Circle()           .stroke(Color.breakUpBlack, lineWidth: 2)                                      }
                 }
                 .padding(.trailing, 25)
-                .familyActivityPicker(isPresented: $isPresented, selection: $stoppingAppViewModel.selectionToDiscourage)
+                .familyActivityPicker(isPresented: $isPresented, selection: $selection)
             }
         }
             
             RoundedRectangle(cornerRadius: 18)
                 .fill(Color.breakUpYellow)
                 .stroke(Color.breakUpBlack, lineWidth: 2)
-                .frame(height: 140)
+                .frame(height: 200)
                 .padding(.horizontal, 20)
                 .overlay {
                     RoundedRectangle(cornerRadius: 18)
                         .fill(Color.breakUpBackground)
                         .stroke(Color.breakUpBlack, lineWidth: 2)
-                        .frame(height: 120)// 높이 110
+                        .frame(height: 180)// 높이 110
                         .padding(.horizontal, 30)
                         .overlay {
                             selectedAppListView()
                                 .padding(.horizontal, 30)
                         }
+                }
+                .onAppear {
+                    selection = stoppingAppViewModel.selectionToDiscourage
                 }
     }
     
@@ -108,10 +111,6 @@ struct StoppingAppView: View {
             }
         }
         .padding()
-        .onAppear {
-            selection = stoppingAppViewModel.selection
-        }
-        
     }
 }
 
