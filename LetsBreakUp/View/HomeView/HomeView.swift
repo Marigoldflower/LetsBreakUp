@@ -9,6 +9,14 @@ import SwiftUI
 
 struct HomeView: View {
     
+    private var currentMonth: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "M"
+        return dateFormatter.string(from: Date())
+    }
+    
+    @State private var selectedMonth: Int = 0
+    
     @State private var circleBorderColor: Color = Color.clear
     @State private var circleBackgroundColor: Color = Color.clear
     
@@ -26,7 +34,7 @@ struct HomeView: View {
                 
                 ScrollView(.vertical) {
                     VStack {
-                        CalendarView()
+                        CalendarView(selectedMonth: $selectedMonth)
                             .padding(15)
                         
                         VStack {
@@ -42,9 +50,14 @@ struct HomeView: View {
                 .scrollIndicators(.hidden)
             }
             .toolbar {
+//                ToolbarItem(placement: .principal) {
+//                    Text("\(currentMonth)월")
+//                        .font(.breakUpFont(size: 17))
+//                }
+                
                 // ToolbarItem으로 영역의 위치를 나눠줄 수 있다.
                 ToolbarItem(placement: .topBarLeading) {
-                    Text("홈 화면")
+                    Text("\(currentMonth)월") // 원래 "홈 화면"
                         .font(.breakUpFont(size: 20))
                 }
                 
@@ -72,6 +85,12 @@ struct HomeView: View {
             endDetoxTime = updateEndDetoxTime()
         }
     }
+    
+//    private func currentMonth() -> String {
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "M"
+//        return dateFormatter.string(from: Date())
+//    }
     
     private func updateStartDetoxTime() -> String {
         let now = Date()
