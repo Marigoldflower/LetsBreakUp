@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct CalendarView: View {
-    @Binding var selectedMonth: Int
-//    @State private var selectedMonth: Int = 0
+    @State private var selectedMonth: Int = 0
     
     var body: some View {
         VStack(spacing: 15) {
@@ -21,5 +20,5 @@ struct CalendarView: View {
 }
 
 #Preview {
-    CalendarView(selectedMonth: .constant(0))
+    CalendarView()
 }

@@ -16,11 +16,11 @@ struct StoppingAppView: View {
     @State var selection = FamilyActivitySelection()
     
     let columns = [
-        GridItem(.fixed(45)),
-        GridItem(.fixed(45)),
-        GridItem(.fixed(45)),
-        GridItem(.fixed(45)),
-        GridItem(.fixed(45))
+        GridItem(.fixed(50)),
+        GridItem(.fixed(50)),
+        GridItem(.fixed(50)),
+        GridItem(.fixed(50)),
+        GridItem(.fixed(50))
     ]
     
     var body: some View {
@@ -47,65 +47,79 @@ struct StoppingAppView: View {
                 .familyActivityPicker(isPresented: $isPresented, selection: $selection)
             }
         }
-            
-            RoundedRectangle(cornerRadius: 18)
-                .fill(Color.breakUpYellow)
-                .stroke(Color.breakUpBlack, lineWidth: 2)
-                .frame(height: 200)
-                .padding(.horizontal, 20)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 18)
-                        .fill(Color.breakUpBackground)
-                        .stroke(Color.breakUpBlack, lineWidth: 2)
-                        .frame(height: 180)// 높이 110
-                        .padding(.horizontal, 30)
-                        .overlay {
+        
+        RoundedRectangle(cornerRadius: 18)
+            .fill(Color.breakUpYellow)
+            .stroke(Color.breakUpBlack, lineWidth: 2)
+            .frame(height: 200)
+            .padding(.horizontal, 20)
+            .overlay {
+                RoundedRectangle(cornerRadius: 18)
+                    .fill(Color.breakUpBackground)
+                    .stroke(Color.breakUpBlack, lineWidth: 2)
+                    .frame(height: 180)// 높이 110
+                    .padding(.horizontal, 30)
+                    .overlay {
+                        ScrollView {
                             selectedAppListView()
                                 .padding(.horizontal, 30)
                         }
-                }
-                .onAppear {
-                    selection = stoppingAppViewModel.selectionToDiscourage
-                }
+                        .scrollIndicators(.hidden)
+                    }
+            }
+            .onAppear {
+                selection = stoppingAppViewModel.selectionToDiscourage
+            }
     }
     
     private func selectedAppListView() -> some View {
         VStack {
             if (selection.applicationTokens.count > 0 || selection.categoryTokens.count > 0) {
-                LazyVGrid(columns: columns, alignment: .leading) {
+                
+                LazyVGrid(columns: columns, alignment: .center) {
                     if selection.applicationTokens.count > 0 {
                         ForEach(Array(selection.applicationTokens), id: \.self) {
                             token in
                             HStack {
+                                Spacer()
+                                
                                 Label(token)
                                     .labelStyle(.iconOnly)
-                                    .scaleEffect(2.5)
+                                    .scaleEffect(1.7)
+                                    .padding(.horizontal, 8)
+                                   
+                                Spacer()
                             }
-                            .frame(width: 56, height: 56)
+//                            .frame(width: 56, height: 56)
                         }
                     }
                     if selection.categoryTokens.count > 0 {
                         ForEach(Array(selection.categoryTokens), id: \.self) {
                             token in
                             HStack {
+                                Spacer()
+                                
                                 Label(token)
                                     .labelStyle(.iconOnly)
-                                    .scaleEffect(1.8)
+                                    .scaleEffect(1.7)
+                                    .padding(.horizontal, 8)
+                                
+                                Spacer()
                             }
-                            .frame(width: 56, height: 56)
+//                            .frame(width: 56, height: 56)
                         }
                     }
                 }
                 .padding()
                 .frame(maxWidth: .infinity, minHeight: 80)
-                .background(Color.breakUpBackground)
+                .background(Color.red)
                 .cornerRadius(16)
             } else {
                 Text("선택된 디톡스 앱이 없습니다.")
                     .foregroundStyle(Color.breakUpBlack)
                     .font(.breakUpFont(size: 15))
                     .padding()
-                    .frame(maxWidth: .infinity, minHeight: 110)
+                    .frame(maxWidth: .infinity, minHeight: 140)
                     .background(Color.breakUpBackground)
                     .cornerRadius(16)
             }
