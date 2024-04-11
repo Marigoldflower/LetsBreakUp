@@ -12,7 +12,7 @@ struct AlertNotificationView: View {
     
     var body: some View {
         HStack {
-            Text("디톡스 종료 후 알림")
+            Text("디톡스 종료 시 알림")
                 .font(.breakUpFont(size: 15))
                 .foregroundStyle(Color.breakUpBlack)
                 .padding(.leading, 20)

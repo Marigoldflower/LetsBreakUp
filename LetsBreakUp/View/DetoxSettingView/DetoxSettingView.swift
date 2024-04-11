@@ -6,13 +6,18 @@
 //
 
 import SwiftUI
+import FamilyControls
+import ManagedSettings
 
 struct DetoxSettingView: View {
     @Environment(\.dismiss) var dismiss
     
+    // Family Activity Selection
+    @State var selection = FamilyActivitySelection()
+    
+    // Time Managing
     @Binding var startTime: String
     @Binding var endTime: String
-    
     @State private var startSelectedTime = Date()
     @State private var endSelectedTime = Date().addingTimeInterval(3600)
     
@@ -25,7 +30,7 @@ struct DetoxSettingView: View {
                 ScrollView(.vertical) {
                     VStack(spacing: 20) {
                         LifeQuotesView()
-                        StoppingAppView()
+                        StoppingAppView(selection: $selection)
                         TimeSettingView(startTime: $startSelectedTime, endtime: $endSelectedTime)
                         AlertNotificationView()
                         
@@ -40,6 +45,10 @@ struct DetoxSettingView: View {
                     Spacer()
                     
                     Button {
+                        if selection.applicationTokens.count == 0 || selection.categoryTokens.count == 0 {
+                            
+                        }
+                        
                         let dateFormatter = DateFormatter()
                         dateFormatter.dateFormat = "HH:mm"
                         
@@ -47,6 +56,7 @@ struct DetoxSettingView: View {
                         endTime = dateFormatter.string(from: endSelectedTime)
                         
                         dismiss()
+                        
                     } label: {
                         Text("확인")
                             .foregroundStyle(Color.breakUpBlack)

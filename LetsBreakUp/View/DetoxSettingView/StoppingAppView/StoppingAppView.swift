@@ -12,15 +12,10 @@ import ManagedSettings
 struct StoppingAppView: View {
     @ObservedObject var stoppingAppViewModel = StoppingAppViewModel.shared
     @State var isPresented = false
-    @State private var detoxAppCount = 0
-    @State var selection = FamilyActivitySelection()
+    @Binding var selection: FamilyActivitySelection
     
-    let columns = [
-        GridItem(.fixed(50)),
-        GridItem(.fixed(50)),
-        GridItem(.fixed(50)),
-        GridItem(.fixed(50)),
-        GridItem(.fixed(50))
+    let rows = [
+        GridItem(.fixed(50), spacing: 15, alignment: .center),
     ]
     
     var body: some View {
@@ -51,20 +46,19 @@ struct StoppingAppView: View {
         RoundedRectangle(cornerRadius: 18)
             .fill(Color.breakUpYellow)
             .stroke(Color.breakUpBlack, lineWidth: 2)
-            .frame(height: 200)
+            .frame(height: 100)
             .padding(.horizontal, 20)
             .overlay {
                 RoundedRectangle(cornerRadius: 18)
                     .fill(Color.breakUpBackground)
                     .stroke(Color.breakUpBlack, lineWidth: 2)
-                    .frame(height: 180)// 높이 110
+                    .frame(height: 80)// 높이 110
                     .padding(.horizontal, 30)
                     .overlay {
-                        ScrollView {
+                        ScrollView(.horizontal) {
                             selectedAppListView()
-                                .padding(.horizontal, 30)
+                                .padding(.horizontal, 40)
                         }
-                        .scrollIndicators(.hidden)
                     }
             }
             .onAppear {
@@ -75,8 +69,7 @@ struct StoppingAppView: View {
     private func selectedAppListView() -> some View {
         VStack {
             if (selection.applicationTokens.count > 0 || selection.categoryTokens.count > 0) {
-                
-                LazyVGrid(columns: columns, alignment: .center) {
+                LazyHGrid(rows: rows, alignment: .center) {
                     if selection.applicationTokens.count > 0 {
                         ForEach(Array(selection.applicationTokens), id: \.self) {
                             token in
@@ -85,14 +78,15 @@ struct StoppingAppView: View {
                                 
                                 Label(token)
                                     .labelStyle(.iconOnly)
+                                    .frame(width: 40, height: 40)
                                     .scaleEffect(1.7)
-                                    .padding(.horizontal, 8)
-                                   
+                                
                                 Spacer()
                             }
-//                            .frame(width: 56, height: 56)
+                            //                            .frame(width: 56, height: 56)
                         }
                     }
+                    
                     if selection.categoryTokens.count > 0 {
                         ForEach(Array(selection.categoryTokens), id: \.self) {
                             token in
@@ -101,34 +95,39 @@ struct StoppingAppView: View {
                                 
                                 Label(token)
                                     .labelStyle(.iconOnly)
+                                    .frame(width: 40, height: 40)
                                     .scaleEffect(1.7)
-                                    .padding(.horizontal, 8)
                                 
                                 Spacer()
                             }
-//                            .frame(width: 56, height: 56)
+                            //                            .frame(width: 56, height: 56)
                         }
                     }
                 }
                 .padding()
-                .frame(maxWidth: .infinity, minHeight: 80)
-                .background(Color.red)
+                .frame(maxWidth: .infinity, minHeight: 60)
+                .background(Color.breakUpBackground)
                 .cornerRadius(16)
             } else {
-                Text("선택된 디톡스 앱이 없습니다.")
-                    .foregroundStyle(Color.breakUpBlack)
-                    .font(.breakUpFont(size: 15))
-                    .padding()
-                    .frame(maxWidth: .infinity, minHeight: 140)
-                    .background(Color.breakUpBackground)
-                    .cornerRadius(16)
+                HStack {
+                    Spacer()
+                    
+                    Text("선택된 디톡스 앱이 없습니다.")
+                        .foregroundStyle(Color.breakUpBlack)
+                        .font(.breakUpFont(size: 15))
+                        .padding(.horizontal, 20)
+                        .frame(height: 60)
+                        .background(Color.red)
+                        .cornerRadius(16)
+                    
+                    Spacer()
+                }
             }
         }
-        .padding()
     }
 }
 
 
 #Preview {
-    StoppingAppView()
+    StoppingAppView(selection: .constant(FamilyActivitySelection()))
 }
