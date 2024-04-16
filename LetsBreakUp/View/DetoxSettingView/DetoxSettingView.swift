@@ -83,7 +83,12 @@ struct DetoxSettingView: View {
                     .stroke(Color.black, lineWidth: 2)
                     .background(Circle().fill(Color.white))
                     .onTapGesture {
-                        dismiss()
+                        if selection.applicationTokens.count == 0 || selection.categoryTokens.count == 0 || selection.categories.count == 0 {
+                            print("현재 만들어진 값이 없습니다")
+                            dismiss()
+                        } else {
+                            print("야호!")
+                        }
                     }
                     .overlay(
                         Image(systemName: "chevron.left")
