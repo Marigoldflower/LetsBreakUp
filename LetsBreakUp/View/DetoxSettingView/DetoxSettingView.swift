@@ -88,6 +88,7 @@ struct DetoxSettingView: View {
                             dismiss()
                         } else {
                             print("야호!")
+                            print("아이템을 생성하엿습니다")
                         }
                     }
                     .overlay(
