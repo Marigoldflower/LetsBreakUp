@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CalendarWeekDay: View {
-    let weekDays = ["일", "월", "화", "수", "목", "금", "토", "일"]
+    let weekDays = ["일", "월", "화", "수", "목", "금", "토"]
     
     var body: some View {
         HStack {
