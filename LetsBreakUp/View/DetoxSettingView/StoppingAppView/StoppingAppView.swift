@@ -43,23 +43,15 @@ struct StoppingAppView: View {
             }
         }
         
+        
         RoundedRectangle(cornerRadius: 18)
-            .fill(Color.breakUpYellow)
+            .fill(Color.breakUpWhite)
             .stroke(Color.breakUpBlack, lineWidth: 2)
             .frame(height: 100)
             .padding(.horizontal, 20)
             .overlay {
-                RoundedRectangle(cornerRadius: 18)
-                    .fill(Color.breakUpBackground)
-                    .stroke(Color.breakUpBlack, lineWidth: 2)
-                    .frame(height: 80)// 높이 110
-                    .padding(.horizontal, 30)
-                    .overlay {
-                        ScrollView(.horizontal) {
-                            selectedAppListView()
-                                .padding(.horizontal, 40)
-                        }
-                    }
+                selectedAppListView()
+                    .padding(.horizontal, 10)
             }
             .onAppear {
                 selection = stoppingAppViewModel.selectionToDiscourage
@@ -78,7 +70,7 @@ struct StoppingAppView: View {
                                 
                                 Label(token)
                                     .labelStyle(.iconOnly)
-                                    .frame(width: 40, height: 40)
+                                    .frame(width: 60, height: 40)
                                     .scaleEffect(1.7)
                                 
                                 Spacer()
@@ -95,7 +87,7 @@ struct StoppingAppView: View {
                                 
                                 Label(token)
                                     .labelStyle(.iconOnly)
-                                    .frame(width: 40, height: 40)
+                                    .frame(width: 60, height: 40)
                                     .scaleEffect(1.7)
                                 
                                 Spacer()
@@ -115,7 +107,7 @@ struct StoppingAppView: View {
                     Text("선택된 디톡스 앱이 없습니다.")
                         .foregroundStyle(Color.breakUpBlack)
                         .font(.breakUpFont(size: 15))
-                        .padding(.horizontal, 20)
+                        .padding(.horizontal, 10)
                         .frame(height: 60)
                         .background(Color.red)
                         .cornerRadius(16)

@@ -9,13 +9,18 @@ import SwiftUI
 
 extension UIColor {
     static let breakUpGray = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.00)
+    static let breakUpBlack = UIColor(red: 0.18, green: 0.11, blue: 0.06, alpha: 1.00)
 }
 
 extension Color {
     static let breakUpViolet = Color(UIColor(red: 0.56, green: 0.71, blue: 0.95, alpha: 1.00))
     static let breakUpMint = Color(UIColor(red: 0.41, green: 0.78, blue: 0.76, alpha: 1.00))
     static let breakUpBackground = Color(UIColor(red: 0.99, green: 0.96, blue: 0.91, alpha: 1.00))
-    static let breakUpBlack = Color(UIColor(red: 0.03, green: 0.03, blue: 0.02, alpha: 1.00))
+    // UIColor(red: 0.99, green: 0.96, blue: 0.91, alpha: 1.00)
+    // UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00)
+    // UIColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.00)
+    static let breakUpWhite = Color(UIColor(red: 0.96, green: 0.95, blue: 0.93, alpha: 1.00))
+    static let breakUpBlack = Color(UIColor(red: 0.18, green: 0.11, blue: 0.06, alpha: 1.00))
     static let breakUpYellow = Color(UIColor(red: 0.98, green: 0.79, blue: 0.47, alpha: 1.00))
     static let breakUpOrange = Color(UIColor(red: 0.96, green: 0.50, blue: 0.36, alpha: 1.00))
     static let breakUpRed = Color(UIColor(red: 0.86, green: 0.33, blue: 0.25, alpha: 1.00))

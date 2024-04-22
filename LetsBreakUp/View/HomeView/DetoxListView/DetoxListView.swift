@@ -12,28 +12,21 @@ struct DetoxListView: View {
     
     var body: some View {
         RoundedRectangle(cornerRadius: 18)
-            .fill(Color.breakUpYellow)
+            .fill(Color.breakUpWhite)
             .stroke(Color.breakUpBlack, lineWidth: 2)
             .frame(height: 140)
             .padding()
             .overlay {
-                RoundedRectangle(cornerRadius: 18)
-                    .fill(Color.breakUpBackground)
-                    .stroke(Color.breakUpBlack, lineWidth: 2)
-                    .frame(height: 120)// 높이 110
-                    .padding(30)
-                    .overlay {
-                        VStack(spacing: 30) {
-                            if detoxAppCount == 0 {
-                                Text("선택된 디톡스 앱이 없습니다.")
-                                    .font(.breakUpFont(size: 15))
-                                    .foregroundStyle(Color.breakUpBlack)
-                                
-                            } else {
-                                
-                            }
-                        }
+                VStack(spacing: 30) {
+                    if detoxAppCount == 0 {
+                        Text("선택된 디톡스 앱이 없습니다.")
+                            .font(.breakUpFont(size: 15))
+                            .foregroundStyle(Color.breakUpBlack)
+                        
+                    } else {
+                        
                     }
+                }
             }
     }
 }

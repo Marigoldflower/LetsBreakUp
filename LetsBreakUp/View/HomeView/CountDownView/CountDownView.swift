@@ -13,50 +13,43 @@ struct CountDownView: View {
     
     var body: some View {
         RoundedRectangle(cornerRadius: 18)
-            .fill(Color.breakUpYellow)
+            .fill(Color.breakUpWhite)
             .stroke(Color.breakUpBlack, lineWidth: 2)
             .frame(height: 260)
             .padding()
             .overlay {
-                RoundedRectangle(cornerRadius: 18)
-                    .fill(Color.breakUpBackground)
-                    .stroke(Color.breakUpBlack, lineWidth: 2)
-                    .frame(height: 240)// 높이 110
-                    .padding(30)
-                    .overlay {
-                        VStack(spacing: 30) {
+                VStack(spacing: 30) {
+                    
+                    VStack(spacing: 10) {
+                        HStack {
+                            Text("디톡스 시작 시간 -")
+                                .font(.breakUpFont(size: 20))
+                                .foregroundStyle(Color.breakUpBlack)
                             
-                            VStack(spacing: 10) {
-                                HStack {
-                                    Text("디톡스 시작 시간 -")
-                                        .font(.breakUpFont(size: 20))
-                                        .foregroundStyle(Color.breakUpBlack)
-                                    
-                                    Text(startDetoxTime)
-                                        .font(.breakUpFont(size: 23))
-                                        .foregroundStyle(Color.breakUpOrange)
-                                }
-                                
-                                HStack {
-                                    Text("디톡스 종료 시간 -")
-                                        .font(.breakUpFont(size: 20))
-                                        .foregroundStyle(Color.breakUpBlack)
-                                    Text(endDetoxTime)
-                                        .font(.breakUpFont(size: 23))
-                                        .foregroundStyle(Color.breakUpOrange)
-                                }
-                            }
-                            
-                            VStack(spacing: 15) {
-                                Text("종료시간까지")
-                                    .font(.breakUpFont(size: 30))
-                                    .foregroundStyle(Color.breakUpBlack)
-                                Text("\(calculateTimeRemaining())")
-                                    .font(.breakUpFont(size: 30))
-                                    .foregroundStyle(Color.breakUpRed)
-                            }
+                            Text(startDetoxTime)
+                                .font(.breakUpFont(size: 23))
+                                .foregroundStyle(Color.breakUpOrange)
+                        }
+                        
+                        HStack {
+                            Text("디톡스 종료 시간 -")
+                                .font(.breakUpFont(size: 20))
+                                .foregroundStyle(Color.breakUpBlack)
+                            Text(endDetoxTime)
+                                .font(.breakUpFont(size: 23))
+                                .foregroundStyle(Color.breakUpOrange)
                         }
                     }
+                    
+                    VStack(spacing: 15) {
+                        Text("종료시간까지")
+                            .font(.breakUpFont(size: 30))
+                            .foregroundStyle(Color.breakUpBlack)
+                        Text("\(calculateTimeRemaining())")
+                            .font(.breakUpFont(size: 30))
+                            .foregroundStyle(Color.breakUpRed)
+                    }
+                }
             }
     }
     
